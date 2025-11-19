@@ -20,7 +20,7 @@ O MediaShelf é um sistema de catalogação de mídias que permite aos usuários
 
 ### **Entidades Principais**
 - **User**: Gerenciamento de usuários
-- **Media**: Catálogo de mídias (filmes, séries, etc.)
+- **Media**: Catálogo de mídias (filmes, séries, livros, etc.)
 - **Review**: Sistema de avaliações e comentários
 
 ### **Relacionamentos**
