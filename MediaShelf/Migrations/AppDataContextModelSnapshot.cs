@@ -54,6 +54,8 @@ namespace MediaShelf.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasMaxLength(1000)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
@@ -62,8 +64,8 @@ namespace MediaShelf.Migrations
                     b.Property<int>("MediaId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("INTEGER");
+                    b.Property<double>("Rating")
+                        .HasColumnType("REAL");
 
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
@@ -72,7 +74,8 @@ namespace MediaShelf.Migrations
 
                     b.HasIndex("MediaId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId", "MediaId")
+                        .IsUnique();
 
                     b.ToTable("Reviews");
                 });
@@ -124,7 +127,7 @@ namespace MediaShelf.Migrations
                     b.HasOne("MediaShelf.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Media");
