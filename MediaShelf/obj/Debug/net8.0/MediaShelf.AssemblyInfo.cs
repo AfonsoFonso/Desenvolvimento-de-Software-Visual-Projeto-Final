@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MediaShelf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d088fe97d4218d0087945a3be20bfd8487458d97")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18ca14a60477536a10d82560e4eeb5a9041bd8fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("MediaShelf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MediaShelf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
